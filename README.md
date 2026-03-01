@@ -26,7 +26,7 @@ A beautiful, responsive movie database application built with vanilla JavaScript
 - 📍 Katlehong, Gauteng
 
 ## 🚀 Live Demo
-[View Live Demo](https://your-username.github.io/movie-database)
+[View Live Demo][(https://your-username.github.io/movie-database)](https://sandilenkosi12.github.io/-MovieFlix---Movie-Database-App/)
 
 ## 🔑 API Key
 This project uses the TMDB API. Get your free key at [themoviedb.org](https://www.themoviedb.org/)
