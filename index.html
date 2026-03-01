@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix | Sandile Nkosi</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <h1><i class="fas fa-film"></i> MovieFlix</h1>
+                <p class="subtitle">by Sandile Nkosi</p>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Guest</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <ul class="nav-tabs">
+                <li class="active" data-tab="trending"><i class="fas fa-fire"></i> Trending</li>
+                <li data-tab="search"><i class="fas fa-search"></i> Search</li>
+                <li data-tab="watchlist"><i class="fas fa-bookmark"></i> Watchlist</li>
+                <li data-tab="genres"><i class="fas fa-tags"></i> Genres</li>
+            </ul>
+        </nav>
+
+        <!-- Search Bar (visible on search tab) -->
+        <div class="search-section" id="searchSection" style="display: none;">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search for movies... (e.g., Inception, Avatar)" autocomplete="off">
+                <button id="searchBtn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div id="autocompleteResults" class="autocomplete-box"></div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main id="mainContent">
+            <!-- Movies will be loaded here dynamically -->
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading amazing movies...
+            </div>
+        </main>
+
+        <!-- Movie Details Modal -->
+        <div id="movieModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Movie Title</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Movie details will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary" id="addToWatchlistBtn">
+                        <i class="fas fa-bookmark"></i> Add to Watchlist
+                    </button>
+                    <button class="btn-secondary" id="rateMovieBtn">
+                        <i class="fas fa-star"></i> Rate Movie
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rating Modal -->
+        <div id="ratingModal" class="modal">
+            <div class="modal-content small-modal">
+                <div class="modal-header">
+                    <h3>Rate This Movie</h3>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="rating-stars">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                        <i class="far fa-star" data-rating="6"></i>
+                        <i class="far fa-star" data-rating="7"></i>
+                        <i class="far fa-star" data-rating="8"></i>
+                        <i class="far fa-star" data-rating="9"></i>
+                        <i class="far fa-star" data-rating="10"></i>
+                    </div>
+                    <textarea id="reviewText" placeholder="Write your review (optional)..." rows="4"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary" id="submitRating">Submit Rating</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>© 2026 Sandile Nkosi | 060 523 9905 | abelnkosi2000@gmail.com</p>
+                <p class="small">📍 Katlehong, Gauteng | Data provided by TMDB</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
